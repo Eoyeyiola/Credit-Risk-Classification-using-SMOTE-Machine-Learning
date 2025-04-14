@@ -1,57 +1,70 @@
-Credit Risk Classification using SMOTE & Machine Learning
-This project explores the classification of loan statuses using machine learning models on the Lending Club dataset. A key challenge addressed is the severe class imbalance, which was tackled using SMOTE (Synthetic Minority Oversampling Technique).
+# Credit Risk Classification: An Analysis using SMOTE and Machine Learning
 
-Problem Statement
-Lending institutions often struggle to identify risky loans due to imbalanced datasets—where "Charged Off" or "Late" statuses are underrepresented. This leads to models biased toward the "Current" class, creating blind spots in risk prediction.
+## Introduction
+Many lending institutions struggle to accurately classify loan statuses, especially when working with imbalanced datasets. Rare cases such as "Charged Off" or "Late" are often underrepresented, leading to biased models that mostly predict the majority class (e.g., "Current"). This project aims to address this challenge using a data-driven approach.
 
-Dataset
-Source: Kaggle - Lending Club Loan Data- https://www.kaggle.com/datasets/adarshsng/lending-club-loan-data-csv
+## Dataset
+- **Source:** [Lending Club Loan Data (2007–2015)](https://www.kaggle.com/datasets/adarshsng/lending-club-loan-data-csv)
+- **Size:** 890,000+ observations, 75 variables
 
-Size: 890,000+ rows | 75 columns
+## Objective
+To build a machine learning model that accurately predicts loan status across multiple categories by handling class imbalance and evaluating performance across several metrics.
 
-Period: 2007–2015
+## Tools & Technologies
+- Python (Pandas, NumPy, Scikit-learn, Imbalanced-learn)
+- Power BI (for visualization)
 
-Tools & Techniques
-Python (Pandas, Scikit-learn, Matplotlib, Seaborn)
+## Approach
+### 1. Data Cleaning & Preprocessing
+- Removed columns with over 50% missing values
+- Dropped or imputed missing values for other features
+- Encoded categorical variables
 
-Power BI for Visualization
+### 2. Addressing Class Imbalance
+- Used **SMOTE (Synthetic Minority Oversampling Technique)** to oversample minority classes
+- Compared model performance before and after SMOTE
 
-SMOTE for oversampling minority classes
+### 3. Model Building
+- Trained multiple classifiers: Logistic Regression, Random Forest, and XGBoost
+- Evaluated using Accuracy, Precision, Recall, F1-Score, and Confusion Matrix
 
-Logistic Regression, Random Forest, and other ML classifiers
+### 4. Visualization
+- Created interactive dashboards in Power BI to display:
+  - Class distribution before and after SMOTE
+  - Confusion matrices
+  - Feature importance
+  - Model performance comparison
 
-Evaluation metrics: Accuracy, Precision, Recall, F1-score, Confusion Matrix
+## Key Findings
+1. **Severe class imbalance** resulted in poor recall for minority classes without SMOTE.
+2. **SMOTE significantly improved** model recall and F1-scores for "Charged Off" and "Late" statuses.
+3. **Accuracy is not sufficient** to evaluate models on imbalanced data — recall, precision, and confusion matrices revealed the full picture.
+4. **Some misclassifications remain**, suggesting the need for further tuning and possibly more advanced techniques.
 
-Approach
-Data Cleaning: Removed columns with >50% missing values. Handled NaNs and infinite values.
+## Visual Results
+Power BI dashboards include:
+- SMOTE Comparison Charts
+- Confusion Matrices
+- Model Accuracy Tables
+- Feature Importance Visualizations
 
-Feature Engineering: Selected relevant features, encoded categorical variables.
+➡️ [Explore Live Dashboard] - (https://www.novypro.com/create_project/credit-risk-classification-using-smote--machine-learning) 
 
-SMOTE Resampling: Balanced the target variable to improve minority class prediction.
+## Conclusion
+This project successfully demonstrates how to handle class imbalance using SMOTE and how different machine learning models perform under such conditions. It highlights the need for ethical, balanced, and thoughtful modeling practices in financial risk classification.
 
-Model Building: Trained and tested various classifiers.
+## Future Work
+- Fine-tuning model hyperparameters
+- Experimenting with ensemble methods or deep learning
+- Exploring cost-sensitive learning for high-risk misclassifications
 
-Evaluation: Used confusion matrices and classification reports to compare performance.
+## Medium Article
+📝 [Read Full Story on Medium](https://medium.com/@Emaleecious/credit-risk-classification-an-analysis-using-smote-and-machine-learning-6e50cc3776cf)
 
-Visualization: Created performance dashboards in Power BI.
+## Connect
+📬 Feel free to connect or share your thoughts on [LinkedIn](https://www.linkedin.com/in/eoyeyiola/)!
 
-Key Insights
-Without SMOTE, the models heavily favored the "Current" class.
+---
 
-SMOTE significantly improved recall for underrepresented classes like "Charged Off."
-
-Despite improvements, some minority classes still had low scores—highlighting the complexity of real-world credit risk classification.
-
-Visuals
-Power BI Dashboard & Confusion Matrix Samples:
-
-(https://www.novypro.com/create_project/credit-risk-classification-using-smote--machine-learning)
-
-Links
-Medium Article- https://medium.com/@Emaleecious/credit-risk-classification-an-analysis-using-smote-and-machine-learning-6e50cc3776cf
-
-Notebook- 
-
-Let's Connect!
-I'd love feedback from data scientists and professionals in the finance and risk analytics space. Feel free to open issues or share insights.
+**Tags:** #DataScience #MachineLearning #Python #CreditRisk #PowerBI #SMOTE #PortfolioProject
 
